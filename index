@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASK Green House</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f8f5; color:#333; }
+    header { background:#2f855a; color:#fff; padding:20px 0; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { font-size:1.2em; margin-top:5px; }
+    nav { background:#276749; display:flex; justify-content:center; }
+    nav a { color:#fff; text-decoration:none; padding:14px 20px; display:inline-block; }
+    nav a:hover { background:#2f855a; }
+    section { padding:40px 20px; max-width:1000px; margin:auto; }
+    section h2 { color:#2f855a; margin-bottom:20px; text-align:center; }
+    .crops, .contact-info { display:flex; flex-wrap:wrap; justify-content:space-around; }
+    .crop, .contact-item { background:#fff; padding:20px; margin:10px; flex:1 1 200px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+    .crop img { max-width:100%; border-radius:5px; }
+    form input, form textarea { padding:10px; width:100%; margin:5px 0; border-radius:5px; border:1px solid #ccc; }
+    form button { padding:10px 20px; background:#2f855a; color:white; border:none; border-radius:5px; cursor:pointer; margin-top:5px; }
+    footer { background:#276749; color:#fff; text-align:center; padding:20px 0; margin-top:40px; }
+    @media(max-width:600px) { .crops, .contact-info { flex-direction:column; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ASK Green House</h1>
+    <p>Fresh, High-Value Vegetables Year-Round in Mbarara</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#crops">Crops</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>ASK Green House is a greenhouse farming venture on 1 acre of land in Mbarara, Uganda. 
+       We grow high-value vegetables year-round including tomatoes, onions, spinach, cabbage, green pepper, chilli, and eggplant. 
+       Our goal is to provide fresh, premium-quality vegetables to supermarkets, restaurants, and households.</p>
+  </section>
+
+  <section id="crops">
+    <h2>Our Crops</h2>
+    <div class="crops">
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Tomatoes"><h3>Tomatoes</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Onions"><h3>Onions</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Spinach"><h3>Spinach</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Cabbage"><h3>Cabbage</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Green Pepper"><h3>Green Pepper</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Chilli"><h3>Chilli</h3></div>
+      <div class="crop"><img src="https://via.placeholder.com/150" alt="Eggplant"><h3>Eggplant</h3></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We supply fresh, greenhouse-grown vegetables directly to supermarkets, restaurants, and local markets in Mbarara and surrounding areas. 
+       Our controlled greenhouse ensures consistent, high-quality produce throughout the year.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="contact-item"><h3>Location</h3><p>Mbarara, Uganda</p></div>
+      <div class="contact-item"><h3>Email</h3><p>wendy@askgreenhouse.ug</p></div>
+      <div class="contact-item">
+        <h3>Phone</h3><p>+256 700 000 000</p>
+        <a href="https://wa.me/256700000000" target="_blank">
+          <button>Chat on WhatsApp</button>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top:30px;">
+      <h3>Place an Order / Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Phone Number" required>
+        <textarea placeholder="Order / Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ASK Green House. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
