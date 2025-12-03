@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f8f5; color:#333; }
+header { background:#2f855a; color:#fff; padding:20px 0; text-align:center; }
+header h1 { margin:0; font-size:2.5em; }
+header p { font-size:1.2em; margin-top:5px; }
+nav { background:#276749; display:flex; justify-content:center; flex-wrap:wrap; }
+nav a { color:#fff; text-decoration:none; padding:14px 20px; display:inline-block; }
+nav a:hover { background:#2f855a; }
+section { padding:40px 20px; max-width:1000px; margin:auto; }
+section h2 { color:#2f855a; margin-bottom:20px; text-align:center; }
+.crops, .contact-info { display:flex; flex-wrap:wrap; justify-content:space-around; }
+.crop, .contact-item { background:#fff; padding:20px; margin:10px; flex:1 1 200px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+.crop img { max-width:100%; border-radius:5px; margin-bottom:10px; }
+form input, form textarea { padding:10px; width:100%; margin:5px 0; border-radius:5px; border:1px solid #ccc; }
+form button { padding:10px 20px; background:#2f855a; color:white; border:none; border-radius:5px; cursor:pointer; margin-top:5px; }
+footer { background:#276749; color:#fff; text-align:center; padding:20px 0; margin-top:40px; }
+@media(max-width:600px) { .crops, .contact-info { flex-direction:column; } nav { flex-direction:column; } }
