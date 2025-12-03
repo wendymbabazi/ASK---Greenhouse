@@ -1,0 +1,40 @@
+/* General Styles */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f4f7f6; color:#333; line-height:1.6; }
+a { text-decoration:none; }
+button { cursor:pointer; }
+
+/* Header */
+header { background:#2f855a; color:#fff; padding:30px 20px; text-align:center; position:relative; }
+header .logo { width:100px; height:auto; display:block; margin:0 auto 10px; border-radius:50%; border:2px solid #fff; }
+header h1 { margin:10px 0 5px; font-size:2.5em; }
+header p { font-size:1.2em; }
+
+/* Navigation */
+nav { background:#276749; display:flex; justify-content:center; flex-wrap:wrap; }
+nav a { color:#fff; padding:14px 20px; display:inline-block; transition:0.3s; }
+nav a:hover { background:#2f855a; border-radius:5px; }
+
+/* Sections */
+section { padding:60px 20px; max-width:1000px; margin:auto; }
+section h2 { color:#2f855a; margin-bottom:30px; text-align:center; font-size:2em; }
+
+/* Crops */
+.crops { display:flex; flex-wrap:wrap; justify-content:space-around; }
+.crop { background:#fff; padding:20px; margin:10px; flex:1 1 250px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
+.crop:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.crop img { max-width:100%; border-radius:10px; margin-bottom:10px; }
+
+/* Contact Info */
+.contact-info { display:flex; flex-wrap:wrap; justify-content:space-around; margin-bottom:30px; }
+.contact-item { background:#fff; padding:20px; margin:10px; flex:1 1 250px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; }
+
+/* Form */
+form input, form textarea { padding:12px; width:100%; margin:10px 0; border-radius:8px; border:1px solid #ccc; font-size:1em; }
+form button { padding:12px 25px; background:#2f855a; color:white; border:none; border-radius:8px; font-size:1em; transition:0.3s; }
+form button:hover { background:#276749; }
+
+/* Footer */
+footer { background:#276749; color:#fff; text-align:center; padding:25px 0; margin-top:40px; font-size:0.9em; }
+
+/* Responsive */
+@media(max-width:768px) { .crops, .contact-info { flex-direction:column; } nav { flex-direction:column; } }
