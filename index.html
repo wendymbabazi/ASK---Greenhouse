@@ -3,12 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASK Green House</title>
-  <link rel="stylesheet" href="style.css">
+  <title>ASK Green House | Fresh Vegetables Mbarara</title>
+  <style>
+    /* ===== MODERN CSS RESET & VARIABLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2d5a27;
+      --secondary: #4caf50;
+      --accent: #ff9800;
+      --light: #f8f9fa;
+      --dark: #1e1e1e;
+      --gray: #6c757d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --radius: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 2.5rem 1.5rem;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--gray);
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    nav a:hover::after {
+      width: 80%;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      margin-bottom: 4rem;
+      padding: 2.5rem;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--secondary);
+      display: inline-block;
+    }
+
+    /* ===== CROPS GRID ===== */
+    .crops {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .crop {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 1px solid #e9ecef;
+    }
+
+    .crop:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .crop img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .crop:hover img {
+      transform: scale(1.05);
+    }
+
+    .crop h3 {
+      padding: 1.2rem;
+      text-align: center;
+      color: var(--dark);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-item {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--secondary);
+    }
+
+    .contact-item h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 0.5rem;
+    }
+
+    button:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-link {
+        text-decoration: none;
+    }
+
+    /* ===== FORM ===== */
+    .contact-form {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+    }
+
+    form {
+      display: grid;
+      gap: 1.2rem;
+      max-width: 100%;
+    }
+
+    input,
+    textarea {
+      padding: 0.9rem;
+      border: 1px solid #dee2e6;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--gray);
+      border-top: 1px solid #e9ecef;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        header { flex-direction: column; text-align: center; }
+        h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <img src="images/logo.png" alt="ASK Green House Logo" class="logo">
     <div>
@@ -17,92 +275,56 @@
     </div>
   </header>
 
-  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
-    <a href="#crops">Vegetables</a>
+    <a href="#Vegetables">Vegetables</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
     <p>
       ASK Green House is a greenhouse farming venture in Mbarara, Uganda. 
       We grow high-value vegetables year-round including tomatoes, onions, spinach, cabbage, green pepper, and chilli. 
-      Our goal is to provide fresh, premium-quality vegetables to supermarkets, restaurants, and households.
+      Our goal is to provide fresh, premium-quality vegetables directly to supermarkets, restaurants, and households.
     </p>
   </section>
 
-  <!-- Vegetables -->
   <section id="Vegetables">
     <h2>Our Vegetables</h2>
-
     <div class="crops">
-
-      <div class="crop">
-        <img src="images/tomato.jpg" alt="Tomatoes">
-        <h3>Tomatoes</h3>
-      </div>
-
-      <div class="crop">
-        <img src="images/onion.jpg" alt="Onions">
-        <h3>Onions</h3>
-      </div>
-
-      <div class="crop">
-        <img src="images/spinach.jpg" alt="Spinach">
-        <h3>Spinach</h3>
-      </div>
-
-      <div class="crop">
-        <img src="images/cabbage.jpg" alt="Cabbage">
-        <h3>Cabbage</h3>
-      </div>
-
-      <div class="crop">
-        <img src="images/green-pepper.jpg" alt="Green Pepper">
-        <h3>Green Pepper</h3>
-      </div>
-
-      <div class="crop">
-        <img src="images/chilli.jpg" alt="Chilli">
-        <h3>Chilli</h3>
-      </div>
-
+      <div class="crop"><img src="images/tomato.jpg" alt="Tomatoes"><h3>Tomatoes</h3></div>
+      <div class="crop"><img src="images/onion.jpg" alt="Onions"><h3>Onions</h3></div>
+      <div class="crop"><img src="images/spinach.jpg" alt="Spinach"><h3>Spinach</h3></div>
+      <div class="crop"><img src="images/cabbage.jpg" alt="Cabbage"><h3>Cabbage</h3></div>
+      <div class="crop"><img src="images/green-pepper.jpg" alt="Green Pepper"><h3>Green Pepper</h3></div>
+      <div class="crop"><img src="images/chilli.jpg" alt="Chilli"><h3>Chilli</h3></div>
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
     <p>
-      We supply fresh, greenhouse-grown vegetables directly to supermarkets, restaurants, 
-      and local markets in Mbarara and surrounding areas. 
-      Our controlled greenhouse ensures consistent, high-quality produce throughout the year.
+      We supply greenhouse-grown produce directly to local markets in Mbarara. 
+      By using controlled environments, we ensure that our vegetables remain fresh, consistent, and available even during dry seasons.
     </p>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
-
     <div class="contact-info">
       <div class="contact-item">
         <h3>Location</h3>
         <p>Mbarara, Uganda</p>
       </div>
-
       <div class="contact-item">
         <h3>Email</h3>
         <p>wendy@askgreenhouse.ug</p>
       </div>
-
       <div class="contact-item">
-        <h3>Phone</h3>
-        <p>+256 786 377 507</p>
-        <a href="https://wa.me/256786377507" target="_blank">
+        <h3>Direct Access</h3>
+        <a href="https://wa.me/256786377507" target="_blank" class="whatsapp-link">
           <button>Chat on WhatsApp</button>
         </a>
       </div>
@@ -110,16 +332,14 @@
 
     <div class="contact-form">
       <h3>Place an Order / Message</h3>
-
       <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <input type="text" placeholder="Phone Number" required>
-        <textarea placeholder="Order / Message" required></textarea>
-        <button type="submit">Submit</button>
+        <textarea placeholder="Tell us what you need..." required></textarea>
+        <button type="submit">Submit Message</button>
       </form>
     </div>
-
   </section>
 
   <footer>
@@ -128,4 +348,3 @@
 
 </body>
 </html>
-
