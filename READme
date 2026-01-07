@@ -1,19 +1,19 @@
 
-**The Skill: Web Development & Client Solutions**
+# **ASK Green House Landing Page**
+
+### **The Skill: Web Design & Business Solutions**
 
 **Why I built this:**
-I wanted to show how technical design can directly solve a business's problem. For a local venture like **ASK Green House**, a website isn't just about code—it's about making it easy for customers to order fresh produce. This project is a direct result of my **Computer Science** training and my focus on ensuring technology meets actual user needs. 
+I created this to help a local greenhouse venture in Mbarara reach professional clients. It’s designed to turn a physical business into a digital one, making it easier for supermarkets and restaurants to place orders.
 
-**Key Technical Features:**
+**Key Features:**
 
-* 
-**Integrated Responsive Design:** I used custom CSS to ensure the site looks professional on both mobile phones (for farmers/customers on the go) and desktop computers. 
+* **Modern CSS:** Uses variables and a grid system for a clean, professional look.
+* **Mobile Responsive:** Works perfectly on phones and desktops.
+* **Business Tools:** Includes a WhatsApp integration and a custom order form to capture leads.
+* **Clean Code:** Built with semantic HTML for better search engine visibility.
 
+**The Impact:**
+Demonstrates my ability to build user-friendly interfaces that solve real-world business problems, focusing on accessibility and clear information architecture.
 
-* 
-**User-Centric Navigation:** Built with semantic HTML to prioritize the most important information: what they grow and how to buy it. 
-
-
-* **Business Integration:** Features a direct WhatsApp link and order form to turn visitors into active clients instantly.
-
---
+---
